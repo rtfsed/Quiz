@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QUIZ</title>
+</head>
+<body>
+    <h1>Quiz Show</h1>
+    <div class="box-domanda">
+        <h2 id="domanda"></h2>
+    </div>
+    <div class="risposte">
+        <label  class="opzione">
+            <span id="0">5</span>
+            <input id="n1" type="radio" name="risposta" >
+        </label>
+        <label  class="opzione">
+            <span id="1">6</span>
+            <input id="n2" type="radio" name="risposta" >
+        </label>
+        <label  class="opzione">
+            <span id="2">7</span>
+            <input id="n3" type="radio" name="risposta" >
+        </label>
+        <label  class="opzione">
+            <span id="3">8</span>
+            <input id="n4" type="radio" name="risposta" >
+        </label>
+    </div>
+    <br>
+    <button id="but" onclick="quiz()">Conferma</button>
+    <button onclick="next()">NEXT</button>
+    <script src="main.js"></script>
+</body>
+</html>

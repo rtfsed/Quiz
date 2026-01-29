@@ -1,0 +1,15 @@
+
+.opzione{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+span{
+    text-align: center;
+}
+.risposte{
+    display: flex;
+    flex-direction: row;
+}

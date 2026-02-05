@@ -10,62 +10,45 @@ let risposte = [
 ]
 let rispGu = [2,3,0]
 let cont = 0;
+
 let textDomanta = document.getElementById("domanda")
-    textDomanta.textContent = domande[0]
+    textDomanta.textContent = domande[cont]
 let rise = document.getElementsByTagName("span");    
 for(let i  = 0;i<4;i++){
     rise[i].textContent = risposte[0][i];
 }
-
+let risp = document.getElementsByName("risposta")
 function quiz(){
-
-    let risp = document.getElementsByName("risposta")
-    
-
-    for(let i = 0;i<4;i++){
+  for(let i = 0;i<4;i++){
         if(risp[i].checked==true)
         {
             if(i==rispGu[cont])
             {
                 console.log("yes")
-                document.getElementById(i).style.color = "green";
+               rise[i].style.color = "#00ff88";
             }
             else
             {
                 console.log("no")
-                document.getElementById(i).style.color = "red";
-                
-            }
-                risp[i].checked=false
+                rise[i].style.color = "red";
+            }       
         }
     }
-    /*
-    cont++
-    if(cont<3){
-    textDomanta.textContent = domande[cont]
-    for(let i  = 0;i<4;i++){
-        rise[i].textContent = risposte[cont][i];
-    }
-    }
-    else{
-        console.log("Finito")
-    }
-    */
-   
 }
 function next(){
     for(let i  = 0;i<4;i++){
         rise[i].style.color = "black";
+        risp[i].checked=false
     }
     cont++
     if(cont<3){
-    textDomanta.textContent = domande[cont]
-    for(let i  = 0;i<4;i++){
-        rise[i].textContent = risposte[cont][i];
-    }
+        textDomanta.textContent = domande[cont]
+        for(let i  = 0;i<4;i++)
+            rise[i].textContent = risposte[cont][i];
     }
     else{
         alert("Finito QUIZ")
         console.log("Finito")
     }
 }
+
